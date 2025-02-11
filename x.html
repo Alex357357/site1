@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <a href="#" onclick="jouerMusique()">clic ici</a>
+    <audio id="musique" src="x.mp3"></audio>
+    <script>
+        function jouerMusique(){
+            let audio=document.getElementById("musique");
+            audio.addEventListener("pause", ()=> audio.play());
+            audio.volume=1.0;
+            audio.play();
+            setTimeout(() =>{
+                audio.pause();
+                audio.currentTime = 0;
+            },600)
+        }
+    </script>
+</body>
+</html>
